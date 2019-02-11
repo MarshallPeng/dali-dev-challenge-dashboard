@@ -1,10 +1,28 @@
 <div class="container-fluid">
   <div class="jumbotron text-center">
     <h1>
-      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo" />
-      <span translate>Hello world !</span>
+      <span>DALI Application Supplement Dashboard</span>
     </h1>
     <app-loader [isLoading]="isLoading"></app-loader>
     <q [hidden]="isLoading">{{ quote }}</q>
+    <br /><br />
+
+    Welcome to my Application Supplement for DALI. I had a ton of fun with this project, though I probably should have
+    given myself more time than just six hours before the deadline. Here is a quick explanation of what this webapp can
+    do. Below, you will see a map with the locations of all the DALI members. If you scroll down even further, you will
+    see a massive list of links. Clicking on these links will take you to a profile page for that member. Please see my
+    README for further discussion of my implementation choices, design, and what I would have liked to change if I had
+    more time.
+  </div>
+
+  <div>
+    <app-all-map></app-all-map>
+  </div>
+
+  <div class="jumbotron">
+    <h3>DALI members</h3>
+    <li *ngFor="let member of members">
+      <a href="{{ this.createProfileURL(member.name) }}">{{ member.name }}</a>
+    </li>
   </div>
 </div>
