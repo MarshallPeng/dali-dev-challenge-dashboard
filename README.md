@@ -1,7 +1,30 @@
-# dali dev challenge dashboard
+# dali dev challenge dashboard - Marshall Peng 2/10/19
 
-This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
-version 5.3.0
+Thank you so much for taking the time to review my code! I had a ton of fun working on this project. I look forward to hearing back from you!
+
+## Features
+
+This basic web app features two main components. A profiles page, and the home page.
+
+- The home page simply includes a map showing where all the DALI members are from and a list of links to their profiles.
+- The profiles page simply displays the name, profile picture, projects, terms on, and quote.
+
+### Technologies used
+
+- Angular 7
+- am4charts
+
+## If I had more time
+
+1. The appearance is pretty gross. I would have liked to make it look a little nicer. Especially the huge list of names at the bottom of the Home page, as well as the color scheme.
+
+   - I would have liked to maybe make cards/buttons for each person, laid out in an orderly fashion. which would then take you to a more detailed profile page.
+
+2. Thankfully, the scope of this project was relatively small, so this point isn't exactly needed, but had this project been larger, I would have liked to write unit tests and incorporate continuous integration.
+
+3. With respect to my git workflow, I ideally would have gotten code reviews in before making pull requests, but that would be outside the scope of this project.
+
+4. Given that I started really late, there are things that I could have abstracted, which would have made my life easier in the long run that I didn't get a chance to. I do recognize many (but definitely not all) of these inefficiencies. These sorts of inefficiencies would not be present in a formal project of mine if I had more time.
 
 # Getting started
 
@@ -93,52 +116,3 @@ A pre-commit git hook has been configured on this project to automatically forma
 (pretty-quick)[https://github.com/azz/pretty-quick], so you don't have to care for it.
 
 You can also force code formatting by running the command `npm run prettier`.
-
-# What's in the box
-
-The app template is based on [HTML5](http://whatwg.org/html), [TypeScript](http://www.typescriptlang.org) and
-[Sass](http://sass-lang.com). The translation files use the common [JSON](http://www.json.org) format.
-
-#### Tools
-
-Development, build and quality processes are based on [angular-cli](https://github.com/angular/angular-cli) and
-[NPM scripts](https://docs.npmjs.com/misc/scripts), which includes:
-
-- Optimized build and bundling process with [Webpack](https://webpack.github.io)
-- [Development server](https://webpack.github.io/docs/webpack-dev-server.html) with backend proxy and live reload
-- Cross-browser CSS with [autoprefixer](https://github.com/postcss/autoprefixer) and
-  [browserslist](https://github.com/ai/browserslist)
-- Asset revisioning for [better cache management](https://webpack.github.io/docs/long-term-caching.html)
-- Unit tests using [Jasmine](http://jasmine.github.io) and [Karma](https://karma-runner.github.io)
-- End-to-end tests using [Protractor](https://github.com/angular/protractor)
-- Static code analysis: [TSLint](https://github.com/palantir/tslint), [Codelyzer](https://github.com/mgechev/codelyzer),
-  [Stylelint](http://stylelint.io) and [HTMLHint](http://htmlhint.com/)
-- Local knowledgebase server using [Hads](https://github.com/sinedied/hads)
-- Automatic code formatting with [Prettier](https://prettier.io)
-
-#### Libraries
-
-- [Angular](https://angular.io)
-- [Bootstrap 4](https://getbootstrap.com)
-- [ng-bootsrap](https://ng-bootstrap.github.io/)
-- [Font Awesome](http://fontawesome.io)
-- [RxJS](http://reactivex.io/rxjs)
-- [ngx-translate](https://github.com/ngx-translate/core)
-- [Lodash](https://lodash.com)
-
-#### Coding guides
-
-- [Angular](docs/coding-guides/angular.md)
-- [TypeScript](docs/coding-guides/typescript.md)
-- [Sass](docs/coding-guides/sass.md)
-- [HTML](docs/coding-guides/html.md)
-- [Unit tests](docs/coding-guides/unit-tests.md)
-- [End-to-end tests](docs/coding-guides/e2e-tests.md)
-
-#### Other documentation
-
-- [I18n guide](docs/i18n.md)
-- [Working behind a corporate proxy](docs/corporate-proxy.md)
-- [Updating dependencies and tools](docs/updating.md)
-- [Using a backend proxy for development](docs/backend-proxy.md)
-- [Browser routing](docs/routing.md)
