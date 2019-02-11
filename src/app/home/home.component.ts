@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit {
 
   constructor(private quoteService: QuoteService, private membersService: MembersService) {}
 
+  /**
+   * Download members and generate quote
+   */
   ngOnInit() {
     this.membersService.getMembers().subscribe(members => {
       this.members = members;
@@ -35,6 +38,10 @@ export class HomeComponent implements OnInit {
       });
   }
 
+  /**
+   * Create url to link to individual profiles
+   * @param name
+   */
   createProfileURL(name: string): string {
     const normalized_name = name.toLowerCase().replace(' ', '_');
     const url = '/profile/' + normalized_name;

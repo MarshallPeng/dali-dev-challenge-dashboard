@@ -1,3 +1,6 @@
+/**
+ * Object to hold member info from api
+ */
 export class Member {
   name: string;
   iconUrl: string;

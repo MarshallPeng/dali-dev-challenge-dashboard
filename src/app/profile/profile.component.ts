@@ -50,6 +50,10 @@ export class ProfileComponent implements OnInit {
     );
   }
 
+  /**
+   * Change blob into displayable image.
+   * @param image
+   */
   createImageFromBlob(image: Blob) {
     console.log('creating image from Blob');
     const reader = new FileReader();
@@ -66,6 +70,9 @@ export class ProfileComponent implements OnInit {
     }
   }
 
+  /**
+   * Download image from URL
+   */
   getImageFromService() {
     this.isImageLoading = true;
     this.membersService.getImage(environment.apiUrl + this.currMember.iconUrl).subscribe(
