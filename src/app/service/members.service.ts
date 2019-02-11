@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
+import { environment } from '@env/environment';
 import { HttpClient } from '@angular/common/http';
 
 import { of } from 'rxjs';
@@ -10,6 +10,10 @@ import { Member } from '@app/model/member';
 @Injectable({
   providedIn: 'root'
 })
+
+/**
+ * Service to handle http requests to provided api
+ */
 export class MembersService {
   private MEMBERS_URL = 'members.json';
   private data: any;
@@ -17,8 +21,12 @@ export class MembersService {
 
   constructor(private http: HttpClient) {}
 
+  /**
+   * Gets the members.json file from the api
+   */
   getMembers() {
     if (this.data) {
+      console.log('api call cached');
       return of(this.data);
     } else if (this.observable) {
       return this.observable;
@@ -41,5 +49,10 @@ export class MembersService {
         .pipe(share());
       return this.observable;
     }
+  }
+
+  getImage(imageUrl: string): Observable<Blob> {
+    console.log(imageUrl);
+    return this.http.get(imageUrl, { responseType: 'blob' });
   }
 }
