@@ -1,0 +1,53 @@
+<div class="container" *ngIf="currMember">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1 class="display-1">
+        {{ this.currMember.name }}
+      </h1>
+    </div>
+
+    <div class="col-sm-4"></div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-sm-4">
+      <img width="300" height="300" [src]="this.profilePicture" alt="Place image title" *ngIf="!this.isImageLoading" />
+    </div>
+    <div class="col-sm-8">
+      <div class="member-info">
+        <blockquote>
+          <h3>
+            <i> "{{ this.currMember.message }}" </i>
+          </h3>
+          <footer class="blockquote-footer">
+            {{ this.currMember.name }}, <cite title="Source Title"> Dartmouth Dali Lab </cite>
+          </footer>
+        </blockquote>
+      </div>
+
+      <div class="member-info">
+        <a href="http://{{ this.currMember.url }}"> Personal Website </a>
+      </div>
+
+      <div class="member-info">
+        <h4>Projects</h4>
+        <ul>
+          <div *ngIf="!projects.length">No Data Available</div>
+          <li *ngFor="let project of projects">
+            {{ project }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="member-info">
+        <h4>Terms On</h4>
+        <ul>
+          <div *ngIf="!terms.length">No Data Available</div>
+          <li *ngFor="let term of terms">
+            {{ term }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,8 +4,9 @@ import { Shell } from '@app/shell/shell.service';
 
 const routes: Routes = [
   Shell.childRoutes([{ path: 'about', loadChildren: 'app/about/about.module#AboutModule' }]),
+  Shell.childRoutes([{ path: 'profile/:name', loadChildren: 'app/profile/profile.module#ProfileModule' }]),
   // Fallback when no prior route is matched
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
