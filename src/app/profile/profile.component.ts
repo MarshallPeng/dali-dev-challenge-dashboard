@@ -13,13 +13,13 @@ import { environment } from '@env/environment';
  * Component that handles display of user profiles.
  */
 export class ProfileComponent implements OnInit {
-  private routeName: string;
-  private members: Member[];
-  private currMember: Member;
-  private profilePicture: any;
-  private isImageLoading: boolean;
-  private projects: string[];
-  private terms: string[];
+  routeName: string;
+  members: Member[];
+  currMember: Member;
+  profilePicture: any;
+  isImageLoading: boolean;
+  projects: string[];
+  terms: string[];
 
   constructor(private route: ActivatedRoute, private membersService: MembersService) {
     this.route.params.subscribe(params => (this.routeName = params['name']));
